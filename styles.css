@@ -1,0 +1,46 @@
+body {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FF69B4; /* Colore rosa abbinato */
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    background-color: #FFB6C1; /* Colore rosa chiaro per i pulsanti */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF69B4; /* Colore rosa più scuro al passaggio del mouse */
+}
+
+#noButton {
+    position: absolute;
+    transition: all 0.2s;
+}

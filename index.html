@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta mi perdoni</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Collega il file CSS -->
+</head>
+<body>
+    <div id="container">
+        <div id="message">Marta mi perdoni <3</div>
+        <div id="buttons">
+            <button id="yesButton">Sì</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            document.getElementById('message').textContent = 'Ti amo';
+        });
+
+        document.getElementById('noButton').addEventListener('mouseover', function() {
+            const button = document.getElementById('noButton');
+            const container = document.getElementById('container');
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
+
+            // Calcola una nuova posizione casuale all'interno del contenitore
+            const randomX = Math.floor(Math.random() * (containerWidth - button.clientWidth));
+            const randomY = Math.floor(Math.random() * (containerHeight - button.clientHeight));
+
+            // Sposta il pulsante nella nuova posizione
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
